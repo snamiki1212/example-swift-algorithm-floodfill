@@ -18,6 +18,7 @@ let WIDTH = firstLine[0] // width
 let HEIGHT = firstLine[1] // height
 var days = [[Int]](repeating: [Int](repeating: -1, count: WIDTH), count: HEIGHT)
 var matrix = [[Int]](repeating: [], count: HEIGHT)
+var visited = [[Bool]](repeating: [Bool](repeating: false, count: WIDTH), count: HEIGHT)
 
 let directions = [
     // [x, y]
@@ -37,7 +38,6 @@ for h in 0..<HEIGHT {
 for h in 0..<HEIGHT {
     for w in 0..<WIDTH {
         if matrix[h][w] == 1 {
-            var visited = [[Bool]](repeating: [Bool](repeating: false, count: WIDTH), count: HEIGHT)
             days[h][w] = 0
             bfs(x: w, y: h, matrix: matrix, days: &days, visited: &visited)
             for line in visited{ print(line) }
@@ -67,13 +67,9 @@ func bfs(x: Int, y: Int, matrix: [[Int]], days: inout [[Int]], visited: inout [[
             let isInRange = nx >= 0 && nx < WIDTH && ny >= 0 && ny < HEIGHT
             if !isInRange { continue }
             
-            // case: already visited
-            if visited[ny][nx] { continue }
-            
             // case: empty
             if matrix[ny][nx] == -1 {
                 visited[ny][nx] = true
-                days[ny][nx] = -1
                 continue
             }
             
