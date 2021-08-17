@@ -14,6 +14,7 @@ Next N lines: 0s and 1s where 0(unripe tomatoes), 1(ripe tomatoes), -1(no tomato
 Output Specification
 The minimum days. (O if already ripe, -1 if there’s no way to get all ripe tomatoes)
 
+```
 Sample Input1
 6 4
 0 0 0 0 0 0
@@ -54,3 +55,4 @@ Sample Input5
 -1 1
 Sample Output5
 0
+```

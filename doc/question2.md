@@ -16,6 +16,7 @@ Output Specification
 The shortest length
 
 
+```
 Sample Input1
 10
 1 1 1 0 0 0 0 1 1 1
@@ -33,16 +34,6 @@ Sample Output1
 
 
 
-
-
-
-
-
-
-
-
-
-
 Sample Input2
 10
 1 1 1 0 0 0 0 1 1 1
@@ -57,3 +48,4 @@ Sample Input2
 0 0 0 0 0 0 0 0 0 0
 Sample Output2
 2
+```
